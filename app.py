@@ -48,7 +48,3 @@ if file:
             prediction = nb_model.predict(review_tfidf)
             sentiment = "Positive" if prediction[0] == 1 else "Negative"
             st.write(f"Prediction: {sentiment}")
-fig, ax = plt.subplots()
-    sns.heatmap(confusion_matrix(y_test, y_pred), annot=True, fmt='d', cmap='mako', ax=ax)
-    ax.set_title("Sentiment Analysis Confusion Matrix")
-    st.pyplot(fig)
